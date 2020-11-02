@@ -7,6 +7,7 @@ namespace VarosEpitoProject
 {
     class Program
     {
+        private static Varos felhasznalo;
         static void Main(string[] args)
         {
             List<Varos> varosok = new List<Varos>();
@@ -31,10 +32,30 @@ namespace VarosEpitoProject
                 Console.WriteLine("A fájl nem olvasható!");
                 Console.WriteLine(e.Message);
             }
+        }
+            public static void SajatVaros()
+            {
+
+                Console.WriteLine("Adja meg a városa nevét!");
+                string nev = Console.ReadLine();
+                int meret = 0;
+                do
+                {
+                    Console.WriteLine("Adja meg a városa méretét!");
+                    meret = Convert.ToInt32(Console.ReadLine());
+                    if (meret != 1 && meret != 2 && meret != 3)
+                    {
+                        Console.WriteLine("Rossz értéket adott meg!");
+                    }
+                } while (meret != 1 && meret != 2 && meret != 3);
+
+                felhasznalo = new Varos(nev, meret);
+
+            }
 
         }
     }
-    }
+    
 }
     
 
