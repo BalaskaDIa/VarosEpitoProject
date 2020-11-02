@@ -108,5 +108,23 @@ namespace VarosEpitoProject
                 this.nev, this.lakosok, this.uzletek, this.Alapterulet
                 );
         }
+        public void UzletetEpit(int db)
+        {
+            if (db == 0 || db < 0)
+            {
+                throw new ArgumentException("Nem lehet 0 vagy negatív!");
+            }
+
+            else if (lakosok / 20 > uzletek)
+            {
+                this.uzletek += db;
+            }
+
+            else
+            {
+                int MaxUzletek = lakosok / 20;
+                Console.WriteLine("Több üzletet már nem építhet!");
+            }
+        }
     }
 }
