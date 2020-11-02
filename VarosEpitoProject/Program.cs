@@ -52,6 +52,33 @@ namespace VarosEpitoProject
                 felhasznalo = new Varos(nev, meret);
 
             }
+        public static void Menu()
+        {
+            Console.Clear();
+            Console.WriteLine("Válasszon egy menüpontot!");
+            Console.WriteLine("a.) Lakásokat betelepíteni");
+            Console.WriteLine("b.) Házat építeni");
+            Console.WriteLine("c.) Üzletet építeni");
+            Console.WriteLine("d.) Kilépni");
+            Console.Write("\r\nVálasztott opció: ");
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    Console.WriteLine("Lakosok száma");
+                    felhasznalo.Lakosok = int.Parse(Console.ReadLine());
+                    break;
+                case "2":
+                    Random r = new Random();
+                    felhasznalo.Hazak += r.Next(10, 20);
+                    break;
+                case "3":
+                    felhasznalo.UzletetEpit(10);
+                    break;
+                default:
+                    break;
+            }
+            Console.ReadKey();
 
         }
     }
