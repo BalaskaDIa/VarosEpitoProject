@@ -10,5 +10,10 @@ namespace VarosEpitoProject
         int lakosok;
         int hazak;
         int uzletek;
+
+        public string Nev { get => nev; set => nev = value; }
+        public int Lakosok { get => lakosok; set => lakosok = value; }
+        public int Hazak { get => hazak; set => hazak = value; }
+        public int Uzletek { get => uzletek; set => uzletek = value; }
     }
 }
