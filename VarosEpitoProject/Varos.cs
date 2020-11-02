@@ -11,6 +11,27 @@ namespace VarosEpitoProject
         int hazak;
         int uzletek;
 
+        public Varos(string nev, int meret)
+        {
+
+            this.nev = nev;
+            if (meret == 1)
+            {
+                this.hazak = 150; this.uzletek = 20;
+            }
+            else if (meret == 2)
+            {
+                this.hazak = 300; this.uzletek = 45;
+            }
+            else if (meret == 3)
+            {
+
+                this.hazak = 450; this.uzletek = 50;
+            }
+            this.lakosok = this.MaxLakosok / 2;
+
+        }
+
         public string Nev
         {
             get
