@@ -126,5 +126,20 @@ namespace VarosEpitoProject
                 Console.WriteLine("Több üzletet már nem építhet!");
             }
         }
+        public int CompareTo(Varos masikVaros)
+        {
+            if (this.Alapterulet == masikVaros.Alapterulet)
+            {
+                return 0;
+            }
+            else if (this.Alapterulet < masikVaros.Alapterulet)
+            {
+                return -5;
+            }
+            else
+            {
+                return 5;
+            }
+        }
     }
 }
