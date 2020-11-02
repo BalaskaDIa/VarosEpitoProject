@@ -101,5 +101,12 @@ namespace VarosEpitoProject
                 return this.hazak * 110 + this.uzletek * 85.5;
             }
         }
+        public override string ToString()
+        {
+            return String.Format
+                ("{0} - Lakosok: {1}/{2} - Üzletek: {3} - Alapterület: {4}m2",
+                this.nev, this.lakosok, this.uzletek, this.Alapterulet
+                );
+        }
     }
 }
